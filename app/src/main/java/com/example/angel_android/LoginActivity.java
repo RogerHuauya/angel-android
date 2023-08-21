@@ -18,6 +18,8 @@ import com.android.volley.toolbox.Volley;
 import com.example.angel_android.databinding.ActivityLoginBinding;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
+
 import android.content.Intent;
 import android.util.Log;
 import org.json.JSONObject;
@@ -89,8 +91,8 @@ public class LoginActivity extends AppCompatActivity {
                         progressDialog.dismiss();
 
                         // Si la respuesta está vacía, se muestra un mensaje Toast indicando que el inicio de sesión falló
-                        if (response.isEmpty()) {
-                            Toast.makeText(LoginActivity.this, "Login failed.", Toast.LENGTH_SHORT).show();
+                        if (Objects.equals(response, "Invalid login")) {
+                            Toast.makeText(LoginActivity.this, "Login failed: Username or password incorrect", Toast.LENGTH_SHORT).show();
                         } else {
 
                             // Si la respuesta no está vacía, se inicia la actividad MainActivity2

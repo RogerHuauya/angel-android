@@ -30,20 +30,10 @@
         android:id="@+id/loginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/registerBtn"
         android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
         android:text="Login"
         android:background="@drawable/shape_button01"
         android:textColor="@color/white"/>
-
-    <!--Cambiar a register-->
-    <Button
-        android:id="@+id/registerBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/shape_button02"
-        android:text="Nuevo Usuario? Registrate"
-        android:textColor="@color/purple_500"/>
 
 </RelativeLayout>

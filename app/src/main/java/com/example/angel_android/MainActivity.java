@@ -26,12 +26,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //handle skipBtn click, start continue without login screen   CAMBIAR A REGISTER
-        binding.registerBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,RegisterActivity.class));
-            }
-        });
     }
 }

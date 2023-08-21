@@ -89,7 +89,7 @@ public class LastActivity extends AppCompatActivity {
                             TextView textView2 = findViewById(R.id.paragraphTextView);
 
                             textView1.setText(average);
-                            String messageParagraph = "El prodemido del alumno " + studentName +" en el curso " + courseName + " es:";
+                            String messageParagraph = "El promedio del alumno " + studentName +" en el curso " + courseName + " es:";
                             textView2.setText(messageParagraph);
                         } catch (JSONException e) {
                             e.printStackTrace();
