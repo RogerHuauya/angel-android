@@ -4,6 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.text.InputFilter;
+import android.text.InputType;
+import android.text.Spanned;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -119,11 +123,16 @@ public class GradesActivity extends AppCompatActivity {
                                 editText.setLayoutParams(new LinearLayout.LayoutParams(
                                         0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
                                 editText.setHint("Enter grade here");  // Set an appropriate hint
+                                editText.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+
+                                editText.setFilters(new InputFilter[]
+                                        {
+                                                new InputFilterMinMax(0, 20),
+                                        });
+
                                 linearLayoutItem.addView(textview1);
                                 linearLayoutItem.addView(editText);
                                 linearLayout.addView(linearLayoutItem);
-
-
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
